@@ -1,6 +1,7 @@
 "use client";
 
 import { Conversation, mockConversations, mockUsers } from "@/types";
+import Avatar from "../shared/Avatar";
 
 // PUBLIC_INTERFACE
 interface SidebarProps {
