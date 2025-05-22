@@ -38,13 +38,13 @@ export default function ChatContainer() {
     <div className="flex h-screen w-full bg-background">
       {/* Sidebar containing the chat list - hidden on mobile unless toggled */}
       {/* Backdrop overlay for mobile when sidebar is open */}
-      {isMobileSidebarOpen && (
-        <div 
-          className="sm:hidden fixed inset-0 bg-black/50 z-0"
-          onClick={() => setIsMobileSidebarOpen(false)}
-          aria-hidden="true"
-        />
-      )}
+      <div 
+        className={`sm:hidden fixed inset-0 bg-black/50 z-0 transition-opacity duration-300 ease-in-out ${
+          isMobileSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsMobileSidebarOpen(false)}
+        aria-hidden="true"
+      />
       
       <div 
         className={`${isMobileSidebarOpen ? 'block' : 'hidden'} sm:block fixed sm:relative sm:w-80 md:w-96 border-r border-black/10 dark:border-white/10 bg-background z-10 h-full`}
