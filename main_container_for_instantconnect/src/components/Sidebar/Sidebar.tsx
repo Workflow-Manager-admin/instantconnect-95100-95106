@@ -67,10 +67,11 @@ export default function Sidebar({ onSelectConversation, selectedConversationId }
                 onClick={() => onSelectConversation(conversation)}
               >
                 <div className="flex items-center">
-                  {/* Avatar placeholder - in a real app, this would be an image */}
-                  <div className="w-10 h-10 rounded-full bg-black/20 dark:bg-white/20 flex items-center justify-center text-sm">
-                    {getConversationDisplayName(conversation).charAt(0)}
-                  </div>
+                  <Avatar 
+                    alt={getConversationDisplayName(conversation)}
+                    fallback={getConversationDisplayName(conversation).charAt(0)}
+                    size="md"
+                  />
                   
                   <div className="ml-3 flex-grow">
                     <div className="flex items-center justify-between">
