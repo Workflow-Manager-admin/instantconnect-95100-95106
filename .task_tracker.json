@@ -1,0 +1,5 @@
+{
+  "task_description": "{'component_name': 'Main Container for InstantConnect', 'description': 'Primary container for InstantConnect implementation: A real-time messaging application that allows users to communicate instantly with each other through text, supporting one-on-one and group chats with modern communication features.', 'framework': 'nextjs', 'platform': 'web'}",
+  "tasks": {},
+  "next_task_id": 1
+}
