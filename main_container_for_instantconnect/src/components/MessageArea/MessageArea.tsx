@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { Message, mockMessages, mockUsers, mockConversations } from "@/types";
+import Avatar from "../shared/Avatar";
 
 // PUBLIC_INTERFACE
 interface MessageAreaProps {
