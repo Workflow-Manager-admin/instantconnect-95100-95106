@@ -75,8 +75,8 @@ export default function MessageArea({ conversationId }: MessageAreaProps) {
 
   return (
     <div className="flex flex-col h-full">
-      {/* Conversation header */}
-      <div className="flex items-center p-4 border-b border-black/10 dark:border-white/10">
+      {/* Conversation header - hidden on mobile as we have a mobile header in ChatContainer */}
+      <div className="hidden sm:flex items-center p-4 border-b border-black/10 dark:border-white/10">
         {/* Avatar placeholder */}
         <div className="w-10 h-10 rounded-full bg-black/20 dark:bg-white/20 flex items-center justify-center">
           {getConversationName().charAt(0)}
