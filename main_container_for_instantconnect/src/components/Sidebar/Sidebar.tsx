@@ -102,10 +102,15 @@ export default function Sidebar({ onSelectConversation, selectedConversationId }
         </div>
       </div>
       
-      {/* User profile area - placeholder */}
+      {/* User profile area */}
       <div className="p-4 border-t border-black/10 dark:border-white/10">
         <div className="flex items-center">
-          <div className="w-8 h-8 rounded-full bg-black/20 dark:bg-white/20"></div>
+          <Avatar 
+            alt="Your Profile"
+            fallback="Y"
+            size="sm"
+            status="online"
+          />
           <div className="ml-2">
             <div className="text-sm font-medium">Your Name</div>
             <div className="text-xs text-foreground/50">Online</div>
