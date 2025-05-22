@@ -47,8 +47,10 @@ export default function ChatContainer() {
       />
       
       <div 
-        className={`${isMobileSidebarOpen ? 'block' : 'hidden'} sm:block fixed sm:relative sm:w-80 md:w-96 border-r border-black/10 dark:border-white/10 bg-background z-10 h-full`}
-        style={{ width: isMobileSidebarOpen ? '100%' : undefined }}
+        className={`sm:block fixed sm:relative sm:w-80 md:w-96 border-r border-black/10 dark:border-white/10 bg-background z-10 h-full transition-transform duration-300 ease-in-out transform ${
+          isMobileSidebarOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'
+        }`}
+        style={{ width: isMobileSidebarOpen ? '80%' : undefined }}
       >
         <Sidebar 
           onSelectConversation={(conversation) => {
